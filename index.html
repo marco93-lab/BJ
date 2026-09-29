@@ -3,283 +3,401 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BJ Paysagiste — Élagage &amp; espaces verts Pyrénées-Orientales (66)</title>
-<meta name="description" content="Élagage, abattage, taille de haies, débroussaillage OLD, rognage de souches et entretien d'espaces verts dans les Pyrénées-Orientales. Devis gratuit.">
+<title>BJ Multiservices — Paysagisme &amp; Maçonnerie · Pyrénées-Orientales (66)</title>
+<meta name="description" content="Maçonnerie, terrasses, murets, clôtures, élagage, taille de haies et entretien d'espaces verts dans les Pyrénées-Orientales. Un seul artisan, devis gratuit.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-body{margin:0;font-family:'Manrope',sans-serif;background:#F3F0E8;color:#16231B}
-a{color:#16231B;text-decoration:none}a:hover{color:#B8561E}
-</style>
-<style>
-html{scroll-behavior:smooth}
+:root{--ink:#16231B;--green:#1E4631;--green2:#2F6446;--paper:#F3F0E8;--stone:#E7E0D2;--line:#DDD6C6;--text2:#3D4A41;--orange:#B8561E;--orange2:#E0914F;--mint:#E4ECE5}
 *{box-sizing:border-box}
-section,header,footer{max-width:100%}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Manrope',sans-serif;background:var(--paper);color:var(--ink)}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.d{font-family:'Bricolage Grotesque',sans-serif}
+.wrap{max-width:1440px;margin:0 auto;padding:0 80px}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--orange)}
+h1,h2,h3{margin:0}
+h2{font-family:'Bricolage Grotesque',sans-serif;font-size:60px;line-height:1;font-weight:800;letter-spacing:-2px}
+p{margin:0}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;border-radius:999px;padding:18px 28px;font-size:16px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:var(--orange);color:#fff}
+.btn-l{border:1.5px solid var(--ink)}
+
+/* header */
+header{position:sticky;top:0;z-index:10;background:var(--paper);border-bottom:1px solid var(--line)}
+header .wrap{height:84px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand b{font-family:'Bricolage Grotesque',sans-serif;font-size:23px;font-weight:800;letter-spacing:-.5px;display:block;line-height:1}
+.brand small{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--orange);text-transform:uppercase}
+nav{display:flex;gap:32px;font-size:15px;font-weight:600}
+nav a:hover{color:var(--orange)}
+.hcta{display:flex;gap:10px}
+.hcta .btn{padding:12px 20px;font-size:15px}
+
+/* hero */
+.hero .wrap{padding-top:64px;padding-bottom:80px;display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.hero h1{font-family:'Bricolage Grotesque',sans-serif;font-size:80px;line-height:.95;font-weight:800;letter-spacing:-3px;margin:24px 0}
+.hero p.lead{font-size:20px;line-height:1.55;color:var(--text2);max-width:560px}
+.hero .ctas{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.poles{display:flex;gap:10px;flex-wrap:wrap}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.5px}
+.pill.g{background:var(--mint);color:var(--green)}
+.pill.s{background:var(--stone);color:#6B4A2E}
+.checks{display:flex;gap:24px;flex-wrap:wrap;margin-top:28px;font-size:14px;font-weight:600;color:var(--text2)}
+.checks span{display:flex;gap:8px;align-items:center}
+.hero-img{position:relative;height:620px}
+.hero-img .a{position:absolute;inset:0 0 90px 70px;border-radius:28px;background:var(--green) center/cover no-repeat;background-image:url(images/accueil.jpg)}
+.hero-img .b{position:absolute;left:0;bottom:0;width:48%;height:260px;border-radius:24px;border:8px solid var(--paper);background:#CFC5B2 center/cover no-repeat;background-image:url(images/maconnerie-accueil.jpg)}
+.hero-img .tag{position:absolute;right:24px;bottom:120px;background:var(--paper);border-radius:16px;padding:14px 18px;font-weight:700;font-size:14px;display:flex;gap:10px;align-items:center}
+
+/* band */
+.band{background:var(--ink);color:var(--paper);overflow:hidden}
+.band .wrap{min-height:76px;display:flex;align-items:center;justify-content:center;gap:28px;flex-wrap:wrap;font-family:'Bricolage Grotesque',sans-serif;font-size:21px;font-weight:700;padding-top:14px;padding-bottom:14px}
+.band i{color:var(--orange2);font-style:normal}
+
+/* services */
+.svc{padding:110px 0}
+.svc.stone{background:var(--stone)}
+.svc-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:52px}
+.svc-head p{font-size:18px;line-height:1.6;color:var(--text2);max-width:440px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.card{background:#fff;border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.card .ph{height:220px;background:#DDD6C6 center/cover no-repeat}
+.card .ph.none{display:none}
+.card .bd{padding:30px 32px 34px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:27px;font-weight:700;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.card p{font-size:16px;line-height:1.6;color:var(--text2)}
+.card.dark{background:var(--green);color:var(--paper)}
+.card.dark p{color:#D5DED7}
+.badge{font-size:11px;font-weight:800;letter-spacing:1px;padding:5px 10px;border-radius:999px;background:var(--orange2);color:var(--ink);font-family:'Manrope',sans-serif}
+.note{margin-top:28px;display:flex;gap:14px;align-items:center;padding:22px 28px;border:1.5px dashed #B9B09C;border-radius:18px;font-size:16px;color:var(--text2)}
+.note strong{color:var(--ink)}
+
+/* formules */
+.form-s{background:var(--ink);color:var(--paper);padding:100px 0}
+.form-s .eyebrow{color:var(--orange2)}
+.form-s .intro{max-width:760px;display:flex;flex-direction:column;gap:16px;margin-bottom:52px}
+.form-s .intro p{font-size:18px;line-height:1.6;color:#B7C2BA}
+.plan{padding:40px;border:1px solid #3A4A3F;border-radius:24px;display:flex;flex-direction:column;gap:22px}
+.plan .k{font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#B7C2BA}
+.plan h3{font-family:'Bricolage Grotesque',sans-serif;font-size:33px;font-weight:700}
+.plan p{font-size:16px;line-height:1.6;color:#B7C2BA}
+.plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:11px;font-size:15px}
+.plan li:before{content:"— "}
+.plan .btn{margin-top:auto;justify-content:center;border:1.5px solid var(--paper)}
+.plan.hl{background:var(--paper);color:var(--ink);border:none}
+.plan.hl .k{color:var(--green)}
+.plan.hl p{color:var(--text2)}
+.plan.hl .btn{background:var(--orange);color:#fff;border:none}
+.plan .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.plan .hot{font-size:12px;font-weight:800;padding:6px 12px;border-radius:999px;background:var(--orange);color:#fff}
+.form-s .foot{margin-top:28px;font-size:14px;color:#8E9C92}
+
+/* steps */
+.steps{padding:110px 0}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:52px}
+.step{border-top:3px solid var(--ink);padding-top:24px;display:flex;flex-direction:column;gap:12px}
+.step .n{font-family:'Bricolage Grotesque',sans-serif;font-size:54px;font-weight:800;color:var(--orange)}
+.step h3{font-size:21px;font-weight:700}
+.step p{font-size:16px;line-height:1.6;color:var(--text2)}
+
+/* zone */
+.zone{padding:0 0 110px}
+.zone .box{padding:64px;background:var(--mint);border-radius:28px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.zone h2{font-size:50px}
+.zone p{font-size:18px;line-height:1.6;color:var(--text2);margin-top:18px}
+.towns{display:flex;flex-wrap:wrap;gap:10px}
+.towns span{padding:10px 18px;background:#fff;border-radius:999px;font-weight:600;font-size:15px}
+.towns span.all{background:var(--ink);color:var(--paper)}
+
+/* faq */
+.faq{padding:0 0 110px}
+.faq .wrap{display:grid;grid-template-columns:400px 1fr;gap:64px}
+.faq h2{font-size:50px;margin-top:16px}
+details{border-top:1px solid #CFC7B5;padding:24px 0}
+details:last-child{border-bottom:1px solid #CFC7B5}
+summary{font-size:19px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:26px;line-height:1;color:var(--orange)}
+details[open] summary:after{content:"–"}
+details p{font-size:16px;line-height:1.6;color:var(--text2);margin-top:12px}
+
+/* devis */
+.devis{padding:0 0 110px}
+.devis .box{border-radius:28px;overflow:hidden;display:grid;grid-template-columns:480px 1fr}
+.devis .l{padding:60px;background:var(--orange);color:#fff;display:flex;flex-direction:column;gap:22px}
+.devis .l h2{font-size:54px}
+.devis .l p{font-size:18px;line-height:1.6;color:#FCE9DC}
+.devis .l .c{margin-top:auto;display:flex;flex-direction:column;gap:16px;font-size:17px;font-weight:600}
+.devis .l .c a,.devis .l .c span{display:flex;gap:12px;align-items:center}
+form{padding:60px;background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:700}
+input,select,textarea{height:52px;padding:0 16px;border:1.5px solid #CFC7B5;border-radius:12px;font-size:16px;font-family:inherit;background:#F9F7F2;color:var(--ink)}
+textarea{height:150px;padding:14px 16px;resize:vertical}
+.full{grid-column:1/-1}
+form button{height:60px;border:none;border-radius:999px;background:var(--ink);color:#fff;font-size:17px;font-weight:700;font-family:inherit;cursor:pointer}
+
+footer{background:var(--ink);color:#B7C2BA;font-size:14px}
+footer .wrap{padding-top:56px;padding-bottom:56px;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer .n{font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:800;color:var(--paper)}
+footer .col{display:flex;flex-direction:column;gap:10px}
+footer .links{display:flex;gap:28px;flex-wrap:wrap}
+
 @media (max-width:1100px){
- header nav{display:none!important}
- section[style*="grid-template-columns"],#top{grid-template-columns:1fr!important;height:auto!important}
- div[style*="repeat(3"],div[style*="repeat(4"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
- #zone>div,#devis>div,#faq{grid-template-columns:1fr!important}
+ .wrap{padding:0 40px}
+ nav{display:none}
+ .hero .wrap,.zone .box,.faq .wrap,.devis .box{grid-template-columns:1fr}
+ .hero-img{height:520px}
+ .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .svc-head{flex-direction:column;align-items:flex-start}
 }
-@media (max-width:720px){
- header,section,footer{padding-left:20px!important;padding-right:20px!important}
- header a[href^="tel"]{display:none!important}
- h1{font-size:48px!important;letter-spacing:-1.5px!important}
- h2{font-size:38px!important}
- #top>div:last-child{height:320px!important}
- div[style*="repeat(3"],div[style*="repeat(4"],div[style*="repeat(2"],form{grid-template-columns:1fr!important}
- form label,form button{grid-column:auto!important}
- #zone>div,#devis form,#devis>div>div{padding:32px 24px!important}
- #top>div:first-child>div:last-child,#top>div:first-child>div:nth-last-child(2){flex-wrap:wrap}
- div[style*="height: 76px"]{flex-wrap:wrap;height:auto!important;padding:18px;gap:14px!important;font-size:17px!important}
- section>div[style*="space-between"],footer{flex-direction:column;align-items:flex-start!important;gap:24px}
+@media (max-width:680px){
+ .wrap{padding:0 18px}
+ header .wrap{height:70px}
+ .hcta .btn-l{display:none}
+ .hcta .btn{padding:10px 16px;font-size:14px}
+ .brand small{display:none}
+ .hero .wrap{padding-top:36px;padding-bottom:56px;gap:36px}
+ .hero h1{font-size:46px;letter-spacing:-1.5px}
+ .hero p.lead{font-size:17px}
+ .hero-img{height:380px}
+ .hero-img .a{inset:0 0 70px 30px}
+ .hero-img .b{height:170px;border-width:6px}
+ .hero-img .tag{display:none}
+ h2,.zone h2,.faq h2,.devis .l h2{font-size:38px;letter-spacing:-1px}
+ .svc,.steps{padding:70px 0}
+ .form-s{padding:70px 0}
+ .grid3,.grid4,form{grid-template-columns:1fr}
+ .card .ph{height:190px}
+ .zone .box,.devis .l,form{padding:32px 22px}
+ .band .wrap{font-size:16px;gap:12px}
+ .plan{padding:30px 24px}
 }
 </style>
 </head>
 <body>
-<div style="width: 100%; min-height: 100vh; box-sizing: border-box; display: flex; flex-direction: column; background: #F3F0E8; font-family: 'Manrope', sans-serif; color: #16231B">
 
-<!-- NAV -->
-<header style="height: 88px; box-sizing: border-box; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; background: #F3F0E8; border-bottom: 1px solid #DDD6C6">
-<a href="#top" style="display: flex; align-items: center; gap: 12px">
-<svg width="44" height="44" viewBox="0 0 100 100" fill="none" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#1E4631"></rect><path d="M50 12C73 21 80 46 63 63C57 69 50 71 50 71C50 71 43 69 37 63C20 46 27 21 50 12Z" fill="#F3F0E8"></path><path d="M50 24V78C50 87 43 90 36 85" stroke="#E0914F" stroke-width="6" stroke-linecap="round" fill="none"></path><path d="M50 42L61 33M50 54L39 45" stroke="#1E4631" stroke-width="3.5" stroke-linecap="round"></path></svg>
-<span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 24px; font-weight: 800; letter-spacing: -0.5px">BJ Paysagiste</span>
+<header>
+<div class="wrap">
+<a href="#top" class="brand" aria-label="BJ Multiservices — accueil">
+<svg width="44" height="44" viewBox="0 0 100 100" fill="none" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#1E4631"/><path d="M14 70H86M14 82H86M32 70V82M56 70V82M74 70V82" stroke="#E0914F" stroke-width="3.5" stroke-linecap="round"/><path d="M50 12C71 20 77 42 62 57C56 62 50 64 50 64C50 64 44 62 38 57C23 42 29 20 50 12Z" fill="#F3F0E8"/><path d="M50 24V64" stroke="#1E4631" stroke-width="4" stroke-linecap="round"/><path d="M50 38L60 30M50 49L40 41" stroke="#1E4631" stroke-width="3.5" stroke-linecap="round"/></svg>
+<span><b>BJ Multiservices</b><small>Paysagisme · Maçonnerie</small></span>
 </a>
-<nav style="display: flex; gap: 36px; font-size: 15px; font-weight: 600">
-<a href="#services">Services</a>
+<nav>
+<a href="#paysagisme">Paysagisme</a>
+<a href="#maconnerie">Maçonnerie</a>
 <a href="#formules">Formules</a>
-<a href="#methode">Méthode</a>
 <a href="#zone">Zone</a>
 <a href="#faq">FAQ</a>
 </nav>
-<div style="display: flex; gap: 12px; align-items: center">
-<a href="tel:06XXXXXXXX" style="display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 15px; padding: 12px 18px; border: 1.5px solid #16231B; border-radius: 999px">
-<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>
-06 XX XX XX XX</a>
-<a href="#devis" style="font-weight: 700; font-size: 15px; padding: 14px 22px; border-radius: 999px; background: #B8561E; color: #FFFFFF">Devis gratuit</a>
+<div class="hcta">
+<a href="tel:+33604431418" class="btn btn-l">06 04 43 14 18</a>
+<a href="#devis" class="btn btn-o">Devis gratuit</a>
+</div>
 </div>
 </header>
 
-<!-- HERO -->
-<section id="top" style="height: 760px; box-sizing: border-box; padding: 72px 80px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 28px">
-<div style="display: flex; gap: 10px; align-items: center; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1E4631">
-<span style="width: 10px; height: 10px; border-radius: 50%; background: #B8561E"></span>
-Élagueur · Paysagiste · Pyrénées-Orientales
+<section class="hero" id="top">
+<div class="wrap">
+<div>
+<div class="poles"><span class="pill g">Paysagisme</span><span class="pill s">Maçonnerie</span><span class="pill g">Pyrénées-Orientales</span></div>
+<h1>Du jardin à la pierre. Un seul artisan.</h1>
+<p class="lead">Élagage, haies, entretien d'espaces verts, murets, terrasses, clôtures. Tous vos travaux extérieurs dans le 66, avec un interlocuteur unique. Intervention sur devis uniquement.</p>
+<div class="ctas">
+<a href="#devis" class="btn btn-o">Demander mon devis gratuit</a>
+<a href="tel:+33604431418" class="btn btn-l">06 04 43 14 18</a>
 </div>
-<h1 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 84px; line-height: 0.95; font-weight: 800; letter-spacing: -3px">Vos arbres entre de bonnes mains.</h1>
-<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #3D4A41; max-width: 540px">Élagage, abattage, débroussaillage et entretien d'espaces verts dans tout le 66. Particuliers, copropriétés, professionnels. Intervention sur devis uniquement.</p>
-<div style="display: flex; gap: 14px; align-items: center">
-<a href="#devis" style="font-weight: 700; font-size: 17px; padding: 20px 30px; border-radius: 999px; background: #B8561E; color: #FFFFFF">Demander mon devis gratuit</a>
-<a href="tel:06XXXXXXXX" style="font-weight: 700; font-size: 17px; padding: 20px 26px; border-radius: 999px; border: 1.5px solid #16231B">06 XX XX XX XX</a>
-</div>
-<div style="display: flex; gap: 28px; padding-top: 12px; font-size: 14px; font-weight: 600; color: #3D4A41">
-<span style="display: flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Devis gratuit sous 48 h</span>
-<span style="display: flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Déchets verts évacués</span>
-<span style="display: flex; gap: 8px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>Assuré RC Pro</span>
+<div class="checks">
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Devis gratuit sous 48 h</span>
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Chantier nettoyé</span>
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Assuré RC Pro &amp; décennale</span>
 </div>
 </div>
-<div style="height: 600px; border-radius: 28px; overflow: hidden; background: #1E4631">
-<img src="images/accueil.jpg" alt="Élagueur en intervention, tronçonneuse en main" style="width: 100%; height: 100%; object-fit: cover; object-position: 55% 40%; display: block">
+<div class="hero-img" role="img" aria-label="Chantiers de paysagisme et de maçonnerie">
+<div class="a"></div>
+<div class="b"></div>
+<div class="tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8561E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Travail soigné, garanti</div>
+</div>
 </div>
 </section>
 
-<!-- BANDEAU -->
-<div style="height: 76px; background: #16231B; color: #F3F0E8; display: flex; align-items: center; justify-content: center; gap: 40px; font-family: 'Bricolage Grotesque', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: -0.3px">
-<span>Élagage</span><span style="color: #E0914F">✦</span><span>Abattage</span><span style="color: #E0914F">✦</span><span>Taille de haies</span><span style="color: #E0914F">✦</span><span>Débroussaillage OLD</span><span style="color: #E0914F">✦</span><span>Rognage de souches</span><span style="color: #E0914F">✦</span><span>Espaces verts</span>
-</div>
+<div class="band"><div class="wrap">
+<span>Élagage</span><i>✦</i><span>Taille de haies</span><i>✦</i><span>Espaces verts</span><i>✦</i><span>Murets</span><i>✦</i><span>Terrasses</span><i>✦</i><span>Clôtures</span>
+</div></div>
 
-<!-- SERVICES -->
-<section id="services" style="box-sizing: border-box; padding: 120px 80px 100px; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
-<div style="display: flex; flex-direction: column; gap: 16px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #B8561E">01 — Nos services</span>
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 60px; line-height: 1; font-weight: 800; letter-spacing: -2px">Du pied de l'arbre<br>jusqu'à la cime.</h2>
+<!-- PAYSAGISME -->
+<section class="svc" id="paysagisme">
+<div class="wrap">
+<div class="svc-head">
+<div>
+<span class="eyebrow">01 — Paysagisme</span>
+<h2 style="margin-top:16px">Du pied de l'arbre<br>jusqu'à la cime.</h2>
 </div>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #3D4A41; max-width: 440px">Chaque chantier commence par une visite gratuite. Nous chiffrons précisément, sans surprise, selon l'accès, la hauteur et le volume.</p>
+<p>Élagage, taille, débroussaillage et entretien régulier. Chaque chantier commence par une visite gratuite et se termine terrain propre.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div class="grid3">
+<article class="card"><div class="ph" style="background-image:url(images/elagage.jpg)"></div><div class="bd"><h3>Élagage</h3><p>Taille douce, éclaircie, réduction de couronne, bois mort. En grimpe ou nacelle, dans le respect de l'arbre.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/abattage.jpg)"></div><div class="bd"><h3>Abattage &amp; démontage</h3><p>Abattage direct ou démontage par rétention près des maisons et clôtures. Arbres morts, dangereux ou gênants.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/haies.jpg)"></div><div class="bd"><h3>Taille de haies</h3><p>Cyprès, lauriers, thuyas, photinias. Taille d'entretien, de formation ou remise en forme de haies négligées.</p></div></article>
+<article class="card dark"><div class="bd"><h3>Débroussaillage OLD <span class="badge">OBLIGATOIRE</span></h3><p>Mise en conformité avec l'obligation légale de débroussaillement autour des habitations. Broussailles éliminées, houppiers mis à distance.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/souches.jpg)"></div><div class="bd"><h3>Rognage de souches</h3><p>Dessouchage à la rogneuse sous le niveau du sol. Terrain remis à plat, prêt à replanter ou aménager.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/espaces-verts.jpg)"></div><div class="bd"><h3>Entretien espaces verts</h3><p>Tonte, désherbage, taille d'arbustes et fruitiers, feuilles. Ponctuel ou en contrat à l'année.</p></div></article>
+</div>
+<div class="note">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8561E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h13l5 5v5h-3"/><path d="M3 7v10h2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg>
+<span><strong>Inclus sur chaque chantier :</strong> évacuation des gravats et déchets verts, nettoyage complet en fin d'intervention.</span>
+</div>
+</div>
+</section>
 
-<div style="padding: 36px; background: #FFFFFF; border-radius: 22px; display: flex; flex-direction: column; gap: 18px; min-height: 300px; box-sizing: border-box">
-<img src="images/elagage.jpg" alt="Élagage" style="width: calc(100% + 72px); height: 220px; margin: -36px -36px 0; object-fit: cover; border-radius: 22px 22px 0 0; display: block; background: #DDD6C6">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #E4ECE5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-8"></path><path d="M7 14a5 5 0 0 1 0-10 5 5 0 0 1 10 0 5 5 0 0 1 0 10z"></path><path d="m12 16-3-2M12 18l3-2"></path></svg></div>
-<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700">Élagage</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Taille douce, éclaircie, réduction de couronne, suppression de bois mort. Travail en grimpe ou nacelle, dans le respect de la santé de l'arbre.</p>
+<!-- MACONNERIE -->
+<section class="svc stone" id="maconnerie">
+<div class="wrap">
+<div class="svc-head">
+<div>
+<span class="eyebrow">02 — Maçonnerie</span>
+<h2 style="margin-top:16px">Construire, rénover,<br>solide et durable.</h2>
 </div>
-
-<div style="padding: 36px; background: #FFFFFF; border-radius: 22px; display: flex; flex-direction: column; gap: 18px; min-height: 300px; box-sizing: border-box">
-<img src="images/abattage.jpg" alt="Abattage" style="width: calc(100% + 72px); height: 220px; margin: -36px -36px 0; object-fit: cover; border-radius: 22px 22px 0 0; display: block; background: #DDD6C6">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #E4ECE5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"></path><path d="M9 20V8l3-5 3 5v12"></path><path d="M3 11l6 2M21 11l-6 2"></path></svg></div>
-<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700">Abattage &amp; démontage</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Abattage direct ou démontage par rétention pour les arbres proches des maisons, clôtures et lignes. Arbres dangereux, morts ou gênants.</p>
+<p>Petits et moyens travaux de maçonnerie extérieure et intérieure. Chiffrage précis après visite, matériaux adaptés au climat du Roussillon.</p>
 </div>
-
-<div style="padding: 36px; background: #FFFFFF; border-radius: 22px; display: flex; flex-direction: column; gap: 18px; min-height: 300px; box-sizing: border-box">
-<img src="images/haies.jpg" alt="Taille de haies" style="width: calc(100% + 72px); height: 220px; margin: -36px -36px 0; object-fit: cover; border-radius: 22px 22px 0 0; display: block; background: #DDD6C6">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #E4ECE5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="12" rx="3"></rect><path d="M7 8V5M12 8V4M17 8V5"></path></svg></div>
-<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700">Taille de haies</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Haies de cyprès, lauriers, thuyas, photinias. Taille de formation ou d'entretien, remise en forme de haies négligées, taille en hauteur.</p>
+<div class="grid3">
+<article class="card"><div class="ph" style="background-image:url(images/murets.jpg)"></div><div class="bd"><h3>Murs &amp; murets</h3><p>Murs de soutènement, murets de clôture, murs en parpaing, pierre ou moellons. Fondations comprises.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/terrasses.jpg)"></div><div class="bd"><h3>Terrasses &amp; dalles</h3><p>Dalle béton, chape, terrasse carrelée ou en pierre naturelle. Pente d'écoulement et finitions soignées.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/allees.jpg)"></div><div class="bd"><h3>Allées &amp; pavage</h3><p>Allées de jardin, accès garage, bordures, pavés autobloquants, dallage, béton désactivé.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/clotures.jpg)"></div><div class="bd"><h3>Clôtures &amp; portails</h3><p>Soubassements, piliers de portail, pose de clôtures rigides, grillage, panneaux occultants.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/enduits.jpg)"></div><div class="bd"><h3>Enduits &amp; façades</h3><p>Crépi, enduit à la chaux, rejointoiement de pierres, reprise de fissures, rafraîchissement de façade.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/renovation.jpg)"></div><div class="bd"><h3>Petite rénovation</h3><p>Ouverture de mur, petite démolition, reprise de maçonnerie, barbecue et abri de jardin maçonnés.</p></div></article>
 </div>
-
-<div style="padding: 36px; background: #1E4631; color: #F3F0E8; border-radius: 22px; display: flex; flex-direction: column; gap: 18px; min-height: 300px; box-sizing: border-box">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #2F6446; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F3F0E8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c1 3 4 5 4 9a4 4 0 0 1-8 0c0-2 1-3 1-3s1 2 3 2c0-3-1-5 0-8z"></path><path d="M5 21h14"></path></svg></div>
-<div style="display: flex; gap: 10px; align-items: center"><h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700">Débroussaillage OLD</h3><span style="font-size: 11px; font-weight: 800; letter-spacing: 1px; padding: 5px 10px; border-radius: 999px; background: #E0914F; color: #16231B">OBLIGATOIRE</span></div>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #D5DED7">Mise en conformité avec l'obligation légale de débroussaillement autour des habitations. Élimination des broussailles, mise à distance des houppiers.</p>
-</div>
-
-<div style="padding: 36px; background: #FFFFFF; border-radius: 22px; display: flex; flex-direction: column; gap: 18px; min-height: 300px; box-sizing: border-box">
-<img src="images/souches.jpg" alt="Rognage de souches" style="width: calc(100% + 72px); height: 220px; margin: -36px -36px 0; object-fit: cover; border-radius: 22px 22px 0 0; display: block; background: #DDD6C6">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #E4ECE5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="10" rx="8" ry="3"></ellipse><path d="M4 10v4c0 1.7 3.6 3 8 3s8-1.3 8-3v-4"></path><path d="M12 10v.01"></path></svg></div>
-<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700">Rognage de souches</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Dessouchage à la rogneuse sous le niveau du sol. Terrain remis à plat, prêt à replanter, gazonner ou aménager.</p>
-</div>
-
-<div style="padding: 36px; background: #FFFFFF; border-radius: 22px; display: flex; flex-direction: column; gap: 18px; min-height: 300px; box-sizing: border-box">
-<img src="images/espaces-verts.jpg" alt="Entretien espaces verts" style="width: calc(100% + 72px); height: 220px; margin: -36px -36px 0; object-fit: cover; border-radius: 22px 22px 0 0; display: block; background: #DDD6C6">
-<div style="width: 56px; height: 56px; border-radius: 16px; background: #E4ECE5; display: flex; align-items: center; justify-content: center"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"></path><path d="M5 20v-3M8 20v-5M11 20v-3M14 20v-4M17 20v-3M20 20v-5"></path><circle cx="17" cy="6" r="3"></circle></svg></div>
-<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 28px; font-weight: 700">Entretien espaces verts</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Tonte, désherbage, taille d'arbustes et de fruitiers, ramassage de feuilles. Ponctuel ou en contrat à l'année.</p>
-</div>
-
-</div>
-<div style="display: flex; gap: 16px; align-items: center; padding: 24px 32px; border: 1.5px dashed #B9B09C; border-radius: 18px; font-size: 16px; color: #3D4A41">
-<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8561E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13l5 5v5h-3"></path><path d="M3 7v10h2"></path><circle cx="7.5" cy="17.5" r="2.5"></circle><circle cx="16.5" cy="17.5" r="2.5"></circle></svg>
-<span><strong style="color: #16231B">Inclus sur chaque chantier :</strong> broyage sur place ou évacuation des déchets verts, nettoyage complet du terrain en fin d'intervention.</span>
 </div>
 </section>
 
 <!-- FORMULES -->
-<section id="formules" style="box-sizing: border-box; padding: 100px 80px; background: #16231B; color: #F3F0E8; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 760px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #E0914F">02 — Formules</span>
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 60px; line-height: 1; font-weight: 800; letter-spacing: -2px">Une formule pour chaque besoin.</h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #B7C2BA">Aucun tarif affiché : chaque terrain est différent. Chaque formule fait l'objet d'un devis gratuit et détaillé après visite.</p>
+<section class="form-s" id="formules">
+<div class="wrap">
+<div class="intro">
+<span class="eyebrow">03 — Formules</span>
+<h2>Une formule pour chaque projet.</h2>
+<p>Aucun tarif affiché : chaque terrain est différent. Chaque formule fait l'objet d'un devis gratuit et détaillé après visite.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
-
-<div style="padding: 40px; border: 1px solid #3A4A3F; border-radius: 24px; display: flex; flex-direction: column; gap: 24px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #B7C2BA">Ponctuel</span>
-<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 34px; font-weight: 700">Intervention unique</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B7C2BA">Un arbre à élaguer, une haie à reprendre, une souche à retirer. On vient, on fait, on nettoie.</p>
-<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px">
-<span>— Visite et devis gratuits</span><span>— Élagage, abattage ou taille</span><span>— Évacuation des déchets verts</span>
+<div class="grid3">
+<div class="plan">
+<span class="k">Ponctuel</span>
+<h3>Intervention unique</h3>
+<p>Un arbre à élaguer, une haie à reprendre, un muret à monter. On vient, on fait, on nettoie.</p>
+<ul><li>Visite et devis gratuits</li><li>Paysagisme ou maçonnerie</li><li>Évacuation des déchets</li></ul>
+<a href="#devis" class="btn">Sur devis</a>
 </div>
-<a href="#devis" style="margin-top: auto; text-align: center; font-weight: 700; font-size: 16px; padding: 16px; border-radius: 999px; border: 1.5px solid #F3F0E8; color: #F3F0E8">Sur devis</a>
+<div class="plan hl">
+<div class="top"><span class="k">Projet complet</span><span class="hot">Le plus demandé</span></div>
+<h3>Aménagement extérieur</h3>
+<p>Terrasse, murets, allées et jardin pensés ensemble. Un seul artisan, un seul devis, un seul planning.</p>
+<ul><li>Paysagisme + maçonnerie coordonnés</li><li>Plan d'aménagement sur mesure</li><li>Interlocuteur unique du début à la fin</li><li>Finitions et plantations incluses</li></ul>
+<a href="#devis" class="btn">Sur devis</a>
 </div>
-
-<div style="padding: 40px; background: #F3F0E8; color: #16231B; border-radius: 24px; display: flex; flex-direction: column; gap: 24px">
-<div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1E4631">À l'année</span><span style="font-size: 12px; font-weight: 800; padding: 6px 12px; border-radius: 999px; background: #B8561E; color: #FFFFFF">Le plus demandé</span></div>
-<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 34px; font-weight: 700">Contrat d'entretien</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Votre jardin tenu toute l'année sans y penser. Passages planifiés selon les saisons.</p>
-<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px">
-<span>— Tonte et désherbage réguliers</span><span>— Taille des haies 2 fois par an</span><span>— Suivi des arbres, élagage léger</span><span>— Interlocuteur unique</span>
+<div class="plan">
+<span class="k">À l'année</span>
+<h3>Contrat d'entretien</h3>
+<p>Votre extérieur tenu toute l'année sans y penser. Passages planifiés selon les saisons.</p>
+<ul><li>Tonte et désherbage réguliers</li><li>Taille des haies 2 fois par an</li><li>Petites reprises de maçonnerie</li></ul>
+<a href="#devis" class="btn">Sur devis</a>
 </div>
-<a href="#devis" style="margin-top: auto; text-align: center; font-weight: 700; font-size: 16px; padding: 16px; border-radius: 999px; background: #B8561E; color: #FFFFFF">Sur devis</a>
 </div>
-
-<div style="padding: 40px; border: 1px solid #3A4A3F; border-radius: 24px; display: flex; flex-direction: column; gap: 24px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #B7C2BA">Réglementaire</span>
-<h3 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 34px; font-weight: 700">Pack débroussaillage</h3>
-<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B7C2BA">Mise aux normes OLD avant l'été. Idéal pour terrains en zone boisée ou en bordure de garrigue.</p>
-<div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px">
-<span>— Débroussaillage du périmètre</span><span>— Élagage des branches basses</span><span>— Mise à distance des arbres</span>
+<p class="foot">Copropriétés, syndics, mairies et professionnels : formules sur mesure, contactez-nous.</p>
 </div>
-<a href="#devis" style="margin-top: auto; text-align: center; font-weight: 700; font-size: 16px; padding: 16px; border-radius: 999px; border: 1.5px solid #F3F0E8; color: #F3F0E8">Sur devis</a>
-</div>
-
-</div>
-<p style="margin: 0; font-size: 14px; color: #8E9C92">Copropriétés, syndics, mairies et professionnels : formules sur mesure, contactez-nous.</p>
 </section>
 
 <!-- METHODE -->
-<section id="methode" style="box-sizing: border-box; padding: 110px 80px; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; flex-direction: column; gap: 16px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #B8561E">03 — Comment ça marche</span>
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 60px; line-height: 1; font-weight: 800; letter-spacing: -2px">Quatre étapes, zéro surprise.</h2>
+<section class="steps" id="methode">
+<div class="wrap">
+<span class="eyebrow">04 — Comment ça marche</span>
+<h2 style="margin-top:16px">Quatre étapes, zéro surprise.</h2>
+<div class="grid4">
+<div class="step"><span class="n">01</span><h3>Vous nous contactez</h3><p>Par téléphone ou via le formulaire, avec quelques photos si possible.</p></div>
+<div class="step"><span class="n">02</span><h3>Visite sur place</h3><p>Métrés, accès, état du terrain et des arbres. Gratuit, sans engagement.</p></div>
+<div class="step"><span class="n">03</span><h3>Devis détaillé</h3><p>Un prix ferme, poste par poste. Vous validez, on fixe une date.</p></div>
+<div class="step"><span class="n">04</span><h3>Chantier propre</h3><p>Travaux réalisés, déchets évacués, terrain nettoyé.</p></div>
 </div>
-<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 3px solid #16231B"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 56px; font-weight: 800; color: #B8561E">01</span><h3 style="margin: 0; font-size: 22px; font-weight: 700">Vous nous contactez</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Par téléphone ou via le formulaire, avec quelques photos si possible.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 3px solid #16231B"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 56px; font-weight: 800; color: #B8561E">02</span><h3 style="margin: 0; font-size: 22px; font-weight: 700">Visite sur place</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Nous évaluons l'accès, la hauteur, l'état des arbres. Gratuit, sans engagement.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 3px solid #16231B"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 56px; font-weight: 800; color: #B8561E">03</span><h3 style="margin: 0; font-size: 22px; font-weight: 700">Devis détaillé</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Un prix ferme, poste par poste. Vous validez, on fixe une date.</p></div>
-<div style="display: flex; flex-direction: column; gap: 14px; padding-top: 24px; border-top: 3px solid #16231B"><span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 56px; font-weight: 800; color: #B8561E">04</span><h3 style="margin: 0; font-size: 22px; font-weight: 700">Chantier propre</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Intervention sécurisée, déchets verts évacués, terrain nettoyé.</p></div>
 </div>
 </section>
 
 <!-- ZONE -->
-<section id="zone" style="box-sizing: border-box; padding: 0 80px 110px">
-<div style="padding: 64px; background: #E4ECE5; border-radius: 28px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; align-items: center">
-<div style="display: flex; flex-direction: column; gap: 20px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #1E4631">04 — Zone d'intervention</span>
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 52px; line-height: 1; font-weight: 800; letter-spacing: -1.5px">Tout le département des Pyrénées-Orientales.</h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #3D4A41">De la plaine du Roussillon à la côte, jusqu'aux Aspres et au Conflent.</p>
+<section class="zone" id="zone">
+<div class="wrap">
+<div class="box">
+<div>
+<span class="eyebrow" style="color:#1E4631">05 — Zone d'intervention</span>
+<h2 style="margin-top:16px">Tout le département des Pyrénées-Orientales.</h2>
+<p>De la plaine du Roussillon à la côte, jusqu'aux Aspres et au Conflent.</p>
 </div>
-<div style="display: flex; flex-wrap: wrap; gap: 10px">
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Perpignan</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Canet-en-Roussillon</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Argelès-sur-Mer</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Saint-Cyprien</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Rivesaltes</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Thuir</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Céret</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Elne</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Le Boulou</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Prades</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Ille-sur-Têt</span>
-<span style="padding: 10px 18px; background: #FFFFFF; border-radius: 999px; font-weight: 600; font-size: 15px">Collioure</span>
-<span style="padding: 10px 18px; background: #16231B; color: #F3F0E8; border-radius: 999px; font-weight: 600; font-size: 15px">+ toutes communes du 66</span>
+<div class="towns">
+<span>Perpignan</span><span>Canet-en-Roussillon</span><span>Argelès-sur-Mer</span><span>Saint-Cyprien</span><span>Rivesaltes</span><span>Thuir</span><span>Céret</span><span>Elne</span><span>Le Boulou</span><span>Prades</span><span>Ille-sur-Têt</span><span>Collioure</span><span class="all">+ toutes communes du 66</span>
+</div>
 </div>
 </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq" style="box-sizing: border-box; padding: 0 80px 110px; display: grid; grid-template-columns: 420px minmax(0, 1fr); gap: 64px">
-<div style="display: flex; flex-direction: column; gap: 16px">
-<span style="font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #B8561E">05 — Questions</span>
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 52px; line-height: 1; font-weight: 800; letter-spacing: -1.5px">Vous vous demandez…</h2>
+<section class="faq" id="faq">
+<div class="wrap">
+<div>
+<span class="eyebrow">06 — Questions</span>
+<h2>Vous vous demandez…</h2>
 </div>
-<div style="display: flex; flex-direction: column">
-<div style="padding: 26px 0; border-top: 1px solid #CFC7B5; display: flex; flex-direction: column; gap: 10px"><h3 style="margin: 0; font-size: 20px; font-weight: 700">Pourquoi pas de prix sur le site ?</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Hauteur, essence, accès, proximité d'une maison : chaque arbre change le travail. Un devis après visite garantit un prix juste.</p></div>
-<div style="padding: 26px 0; border-top: 1px solid #CFC7B5; display: flex; flex-direction: column; gap: 10px"><h3 style="margin: 0; font-size: 20px; font-weight: 700">Quelle période pour élaguer ?</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Hors montée de sève, idéalement de fin d'automne à fin d'hiver. Les interventions urgentes restent possibles toute l'année.</p></div>
-<div style="padding: 26px 0; border-top: 1px solid #CFC7B5; display: flex; flex-direction: column; gap: 10px"><h3 style="margin: 0; font-size: 20px; font-weight: 700">Suis-je concerné par l'obligation de débroussaillement ?</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Si votre terrain est situé en zone exposée aux feux de forêt, oui. Renseignez-vous en mairie, nous réalisons ensuite la mise en conformité.</p></div>
-<div style="padding: 26px 0; border-top: 1px solid #CFC7B5; border-bottom: 1px solid #CFC7B5; display: flex; flex-direction: column; gap: 10px"><h3 style="margin: 0; font-size: 20px; font-weight: 700">Que devient le bois coupé ?</h3><p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3D4A41">Broyé sur place pour paillage, évacué, ou laissé en bûches si vous le souhaitez. Au choix, précisé dans le devis.</p></div>
+<div>
+<details open><summary>Pourquoi pas de prix sur le site ?</summary><p>Surface, accès, nature du sol, hauteur des arbres : chaque chantier est différent. Un devis après visite garantit un prix juste et ferme.</p></details>
+<details><summary>Pouvez-vous gérer jardin et maçonnerie ensemble ?</summary><p>Oui, c'est notre force. Terrasse, murets, allées et plantations sont coordonnés sur un seul planning, avec un seul interlocuteur.</p></details>
+<details><summary>Faut-il une autorisation pour un mur ou une clôture ?</summary><p>Selon votre commune et la hauteur, une déclaration préalable peut être nécessaire. Renseignez-vous en mairie, nous vous accompagnons sur les éléments techniques.</p></details>
+<details><summary>Quelle période pour élaguer ?</summary><p>Hors montée de sève, idéalement de fin d'automne à fin d'hiver. Les interventions urgentes restent possibles toute l'année.</p></details>
+<details><summary>Suis-je concerné par l'obligation de débroussaillement ?</summary><p>Si votre terrain est en zone exposée aux feux de forêt, oui. Renseignez-vous en mairie, nous réalisons ensuite la mise en conformité.</p></details>
+</div>
 </div>
 </section>
 
 <!-- DEVIS -->
-<section id="devis" style="box-sizing: border-box; padding: 0 80px 110px">
-<div style="border-radius: 28px; overflow: hidden; display: grid; grid-template-columns: 520px minmax(0, 1fr)">
-<div style="padding: 64px; background: #B8561E; color: #FFFFFF; display: flex; flex-direction: column; gap: 24px">
-<h2 style="margin: 0; font-family: 'Bricolage Grotesque', sans-serif; font-size: 56px; line-height: 1; font-weight: 800; letter-spacing: -1.5px">Votre devis gratuit.</h2>
-<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #FCE9DC">Décrivez votre besoin, nous vous rappelons pour fixer une visite.</p>
-<div style="display: flex; flex-direction: column; gap: 16px; margin-top: auto; font-size: 17px; font-weight: 600">
-<a href="tel:06XXXXXXXX" style="color: #FFFFFF; display: flex; gap: 12px; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"></path></svg>06 XX XX XX XX</a>
-<a href="mailto:contact@xxxxxxxx.fr" style="color: #FFFFFF; display: flex; gap: 12px; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>contact@xxxxxxxx.fr</a>
-<span style="display: flex; gap: 12px; align-items: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>Lun – Sam · 8 h – 19 h</span>
+<section class="devis" id="devis">
+<div class="wrap">
+<div class="box">
+<div class="l">
+<h2>Votre devis gratuit.</h2>
+<p>Décrivez votre projet, nous vous rappelons pour fixer une visite.</p>
+<div class="c">
+<a href="tel:+33604431418"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>06 04 43 14 18</a>
+<a href="mailto:bj.multiservices66@gmail.com"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>bj.multiservices66@gmail.com</a>
+<span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Lun – Sam · 8 h – 19 h</span>
 </div>
 </div>
-<form style="padding: 64px; background: #FFFFFF; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700">Nom<input type="text" placeholder="Votre nom" style="height: 52px; padding: 0 16px; border: 1.5px solid #CFC7B5; border-radius: 12px; font-size: 16px; font-family: inherit; background: #F9F7F2"></label>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700">Téléphone<input type="tel" placeholder="06 XX XX XX XX" style="height: 52px; padding: 0 16px; border: 1.5px solid #CFC7B5; border-radius: 12px; font-size: 16px; font-family: inherit; background: #F9F7F2"></label>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700">Commune<input type="text" placeholder="Ex : Perpignan" style="height: 52px; padding: 0 16px; border: 1.5px solid #CFC7B5; border-radius: 12px; font-size: 16px; font-family: inherit; background: #F9F7F2"></label>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700">Prestation<select style="height: 52px; padding: 0 16px; border: 1.5px solid #CFC7B5; border-radius: 12px; font-size: 16px; font-family: inherit; background: #F9F7F2"><option>Élagage</option><option>Abattage / démontage</option><option>Taille de haies</option><option>Débroussaillage OLD</option><option>Rognage de souches</option><option>Entretien espaces verts</option><option>Contrat annuel</option></select></label>
-<label style="grid-column: span 2; display: flex; flex-direction: column; gap: 8px; font-size: 14px; font-weight: 700">Votre besoin<textarea placeholder="Nombre d'arbres, hauteur approximative, accès…" style="height: 150px; padding: 14px 16px; border: 1.5px solid #CFC7B5; border-radius: 12px; font-size: 16px; font-family: inherit; background: #F9F7F2; resize: none"></textarea></label>
-<button type="button" style="grid-column: span 2; height: 60px; border: none; border-radius: 999px; background: #16231B; color: #FFFFFF; font-size: 17px; font-weight: 700; font-family: inherit; cursor: pointer">Envoyer ma demande</button>
+<form onsubmit="event.preventDefault();alert('Formulaire de démonstration');">
+<label>Nom<input type="text" placeholder="Votre nom" required></label>
+<label>Téléphone<input type="tel" placeholder="Votre numéro" required></label>
+<label>Commune<input type="text" placeholder="Ex : Perpignan"></label>
+<label>Prestation
+<select>
+<optgroup label="Paysagisme"><option>Élagage</option><option>Abattage</option><option>Taille de haies</option><option>Débroussaillage OLD</option><option>Rognage de souches</option><option>Entretien espaces verts</option></optgroup>
+<optgroup label="Maçonnerie"><option>Murs &amp; murets</option><option>Terrasse / dalle</option><option>Allée / pavage</option><option>Clôture / portail</option><option>Enduit / façade</option><option>Petite rénovation</option></optgroup>
+<optgroup label="Formules"><option>Aménagement extérieur complet</option><option>Contrat d'entretien annuel</option></optgroup>
+</select></label>
+<label class="full">Votre projet<textarea placeholder="Surface, type de travaux, accès, délais souhaités…"></textarea></label>
+<button type="submit" class="full">Envoyer ma demande</button>
 </form>
+</div>
 </div>
 </section>
 
-<!-- FOOTER -->
-<footer style="flex-grow: 1; box-sizing: border-box; padding: 56px 80px; background: #16231B; color: #B7C2BA; display: flex; justify-content: space-between; align-items: flex-start; font-size: 14px">
-<div style="display: flex; flex-direction: column; gap: 10px">
-<span style="font-family: 'Bricolage Grotesque', sans-serif; font-size: 26px; font-weight: 800; color: #F3F0E8">BJ Paysagiste</span>
-<span>Élagage &amp; espaces verts · Pyrénées-Orientales (66)</span>
+<footer>
+<div class="wrap">
+<div class="col">
+<span class="n">BJ Multiservices</span>
+<span>Paysagisme &amp; maçonnerie · Pyrénées-Orientales (66)</span>
 <span>SIRET XXX XXX XXX XXXXX</span>
 </div>
-<div style="display: flex; gap: 32px">
-<a href="#services" style="color: #B7C2BA">Services</a><a href="#formules" style="color: #B7C2BA">Formules</a><a href="#devis" style="color: #B7C2BA">Devis</a><a href="#top" style="color: #B7C2BA">Mentions légales</a>
+<div class="links">
+<a href="#paysagisme">Paysagisme</a><a href="#maconnerie">Maçonnerie</a><a href="#formules">Formules</a><a href="#devis">Devis</a><a href="#top">Mentions légales</a>
+</div>
 </div>
 </footer>
 
-</div>
 </body>
 </html>
