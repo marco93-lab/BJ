@@ -176,6 +176,25 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
  .band .wrap{font-size:16px;gap:12px}
  .plan{padding:30px 24px}
 }
+
+.real{padding:110px 0;background:var(--paper)}
+.ba-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:52px}
+.ba{background:#fff;border-radius:22px;overflow:hidden}
+.ba .cap{padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.ba .cap b{font-family:'Bricolage Grotesque',sans-serif;font-size:22px}
+.ba .cap small{font-size:14px;color:var(--text2);font-weight:600}
+@media (max-width:900px){.ba-grid{grid-template-columns:1fr}}
+@media (max-width:680px){.real{padding:70px 0}.slider{height:320px}.ba .cap{flex-direction:column;align-items:flex-start;gap:4px}}
+.slider{position:relative;height:440px;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:pan-y;background:#DDD6C6}
+.slider .img{position:absolute;inset:0;background:center/cover no-repeat}
+.slider .before{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.slider .lbl{position:absolute;top:14px;z-index:2;font-size:12px;font-weight:800;letter-spacing:1.2px;padding:6px 12px;border-radius:999px;color:#fff;pointer-events:none}
+.slider .lbl.l{left:14px;background:rgba(22,35,27,.85)}
+.slider .lbl.r{right:14px;background:var(--orange)}
+.slider .handle{position:absolute;top:0;bottom:0;left:var(--p);width:3px;margin-left:-1.5px;background:#fff;z-index:2;pointer-events:none;box-shadow:0 0 8px rgba(0,0,0,.35)}
+.slider .handle i{position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.slider input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3;touch-action:pan-y}
+.ba-hint{font-size:14px;font-weight:600;color:var(--text2);margin-top:14px;display:flex;gap:8px;align-items:center}
 </style>
 </head>
 <body>
@@ -183,14 +202,14 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
 <header>
 <div class="wrap">
 <a href="#top" class="brand" aria-label="BJ Multiservices — accueil">
-<svg width="44" height="44" viewBox="0 0 100 100" fill="none" aria-hidden="true"><rect width="100" height="100" rx="24" fill="#1E4631"/><path d="M14 70H86M14 82H86M32 70V82M56 70V82M74 70V82" stroke="#E0914F" stroke-width="3.5" stroke-linecap="round"/><path d="M50 12C71 20 77 42 62 57C56 62 50 64 50 64C50 64 44 62 38 57C23 42 29 20 50 12Z" fill="#F3F0E8"/><path d="M50 24V64" stroke="#1E4631" stroke-width="4" stroke-linecap="round"/><path d="M50 38L60 30M50 49L40 41" stroke="#1E4631" stroke-width="3.5" stroke-linecap="round"/></svg>
+<img src="images/logo.png" alt="" width="46" height="46" style="border-radius:50%">
 <span><b>BJ Multiservices</b><small>Paysagisme · Maçonnerie</small></span>
 </a>
 <nav>
 <a href="#paysagisme">Paysagisme</a>
 <a href="#maconnerie">Maçonnerie</a>
+<a href="#realisations">Réalisations</a>
 <a href="#formules">Formules</a>
-<a href="#zone">Zone</a>
 <a href="#faq">FAQ</a>
 </nav>
 <div class="hcta">
@@ -269,7 +288,26 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
 <article class="card"><div class="ph" style="background-image:url(images/allees.jpg)"></div><div class="bd"><h3>Allées &amp; pavage</h3><p>Allées de jardin, accès garage, bordures, pavés autobloquants, dallage, béton désactivé.</p></div></article>
 <article class="card"><div class="ph" style="background-image:url(images/clotures.jpg)"></div><div class="bd"><h3>Clôtures &amp; portails</h3><p>Soubassements, piliers de portail, pose de clôtures rigides, grillage, panneaux occultants.</p></div></article>
 <article class="card"><div class="ph" style="background-image:url(images/enduits.jpg)"></div><div class="bd"><h3>Enduits &amp; façades</h3><p>Crépi, enduit à la chaux, rejointoiement de pierres, reprise de fissures, rafraîchissement de façade.</p></div></article>
-<article class="card"><div class="ph" style="background-image:url(images/renovation.jpg)"></div><div class="bd"><h3>Petite rénovation</h3><p>Ouverture de mur, petite démolition, reprise de maçonnerie, barbecue et abri de jardin maçonnés.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/carports.jpg)"></div><div class="bd"><h3>Carports &amp; abris</h3><p>Carports et abris en bois sur dalle ou plots béton, aménagement des abords en dallage ou gravier.</p></div></article>
+</div>
+</div>
+</section>
+
+<!-- REALISATIONS -->
+<section class="real" id="realisations">
+<div class="wrap">
+<div class="svc-head" style="margin-bottom:0">
+<div>
+<span class="eyebrow">03 — Réalisations</span>
+<h2 style="margin-top:16px">Avant, après.<br>Nos chantiers parlent.</h2>
+</div>
+<p>Quelques chantiers réalisés dans le 66. Photos prises sur place. Glissez le curseur pour voir la transformation.</p>
+</div>
+<div class="ba-grid">
+<article class="ba"><div class="slider" style="--p:50%"><div class="img after" style="background-image:url(images/jardin-apres.jpg)"></div><div class="img before" style="background-image:url(images/jardin-avant.jpg);background-position:center 60%"></div><span class="lbl l">AVANT</span><span class="lbl r">APRÈS</span><div class="handle" aria-hidden="true"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></i></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div><div class="cap"><b>Création de jardin</b><small>Gazon en plaques, massif, olivier</small></div></article>
+<article class="ba"><div class="slider" style="--p:50%"><div class="img after" style="background-image:url(images/allee-apres.jpg)"></div><div class="img before" style="background-image:url(images/allee-avant.jpg);background-position:center 60%"></div><span class="lbl l">AVANT</span><span class="lbl r">APRÈS</span><div class="handle" aria-hidden="true"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></i></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div><div class="cap"><b>Allée en pas japonais</b><small>Gazon + dalles pierre</small></div></article>
+<article class="ba"><div class="slider" style="--p:50%"><div class="img after" style="background-image:url(images/olivier-apres.jpg)"></div><div class="img before" style="background-image:url(images/olivier-avant.jpg);background-position:center 55%"></div><span class="lbl l">AVANT</span><span class="lbl r">APRÈS</span><div class="handle" aria-hidden="true"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></i></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div><div class="cap"><b>Jardin autour de l&#39;olivier</b><small>Terrassement, gazon, bordures</small></div></article>
+<article class="ba"><div class="slider" style="--p:50%"><div class="img after" style="background-image:url(images/facade-apres.jpg)"></div><div class="img before" style="background-image:url(images/facade-avant.jpg);background-position:center"></div><span class="lbl l">AVANT</span><span class="lbl r">APRÈS</span><div class="handle" aria-hidden="true"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></i></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div><div class="cap"><b>Mur de clôture</b><small>Enduit de finition</small></div></article>
 </div>
 </div>
 </section>
@@ -278,7 +316,7 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
 <section class="form-s" id="formules">
 <div class="wrap">
 <div class="intro">
-<span class="eyebrow">03 — Formules</span>
+<span class="eyebrow">04 — Formules</span>
 <h2>Une formule pour chaque projet.</h2>
 <p>Aucun tarif affiché : chaque terrain est différent. Chaque formule fait l'objet d'un devis gratuit et détaillé après visite.</p>
 </div>
@@ -312,7 +350,7 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
 <!-- METHODE -->
 <section class="steps" id="methode">
 <div class="wrap">
-<span class="eyebrow">04 — Comment ça marche</span>
+<span class="eyebrow">05 — Comment ça marche</span>
 <h2 style="margin-top:16px">Quatre étapes, zéro surprise.</h2>
 <div class="grid4">
 <div class="step"><span class="n">01</span><h3>Vous nous contactez</h3><p>Par téléphone ou via le formulaire, avec quelques photos si possible.</p></div>
@@ -328,7 +366,7 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
 <div class="wrap">
 <div class="box">
 <div>
-<span class="eyebrow" style="color:#1E4631">05 — Zone d'intervention</span>
+<span class="eyebrow" style="color:#1E4631">06 — Zone d'intervention</span>
 <h2 style="margin-top:16px">Tout le département des Pyrénées-Orientales.</h2>
 <p>De la plaine du Roussillon à la côte, jusqu'aux Aspres et au Conflent.</p>
 </div>
@@ -343,7 +381,7 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
 <section class="faq" id="faq">
 <div class="wrap">
 <div>
-<span class="eyebrow">06 — Questions</span>
+<span class="eyebrow">07 — Questions</span>
 <h2>Vous vous demandez…</h2>
 </div>
 <div>
@@ -376,7 +414,7 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
 <label>Prestation
 <select>
 <optgroup label="Paysagisme"><option>Élagage</option><option>Abattage</option><option>Taille de haies</option><option>Débroussaillage OLD</option><option>Rognage de souches</option><option>Entretien espaces verts</option></optgroup>
-<optgroup label="Maçonnerie"><option>Murs &amp; murets</option><option>Terrasse / dalle</option><option>Allée / pavage</option><option>Clôture / portail</option><option>Enduit / façade</option><option>Petite rénovation</option></optgroup>
+<optgroup label="Maçonnerie"><option>Murs &amp; murets</option><option>Terrasse / dalle</option><option>Allée / pavage</option><option>Clôture / portail</option><option>Enduit / façade</option><option>Carport / abri</option></optgroup>
 <optgroup label="Formules"><option>Aménagement extérieur complet</option><option>Contrat d'entretien annuel</option></optgroup>
 </select></label>
 <label class="full">Votre projet<textarea placeholder="Surface, type de travaux, accès, délais souhaités…"></textarea></label>
@@ -399,5 +437,16 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
 </div>
 </footer>
 
+<script>
+document.querySelectorAll('.slider').forEach(function(s){
+  var r=s.querySelector('input');
+  function set(v){s.style.setProperty('--p',v+'%');}
+  r.addEventListener('input',function(){set(r.value);});
+  // glissement tactile direct
+  function move(e){var b=s.getBoundingClientRect();var x=(e.touches?e.touches[0].clientX:e.clientX)-b.left;var v=Math.max(0,Math.min(100,x/b.width*100));r.value=v;set(v);}
+  s.addEventListener('touchmove',function(e){move(e);},{passive:true});
+  s.addEventListener('touchstart',function(e){move(e);},{passive:true});
+});
+</script>
 </body>
 </html>
