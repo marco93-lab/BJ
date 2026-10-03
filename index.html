@@ -407,18 +407,21 @@ footer .links{display:flex;gap:28px;flex-wrap:wrap}
 <span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Lun – Sam · 8 h – 19 h</span>
 </div>
 </div>
-<form onsubmit="event.preventDefault();alert('Formulaire de démonstration');">
-<label>Nom<input type="text" placeholder="Votre nom" required></label>
-<label>Téléphone<input type="tel" placeholder="Votre numéro" required></label>
-<label>Commune<input type="text" placeholder="Ex : Perpignan"></label>
+<form id="devis-form" novalidate>
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<label>Nom<input type="text" name="Nom" placeholder="Votre nom" required></label>
+<label>Téléphone<input type="tel" name="Téléphone" placeholder="Votre numéro" required></label>
+<label class="full">Email (facultatif)<input type="email" name="email" placeholder="vous@exemple.fr"></label>
+<label>Commune<input type="text" name="Commune" placeholder="Ex : Perpignan"></label>
 <label>Prestation
-<select>
+<select name="Prestation">
 <optgroup label="Paysagisme"><option>Élagage</option><option>Abattage</option><option>Taille de haies</option><option>Débroussaillage OLD</option><option>Rognage de souches</option><option>Entretien espaces verts</option></optgroup>
 <optgroup label="Maçonnerie"><option>Murs &amp; murets</option><option>Terrasse / dalle</option><option>Allée / pavage</option><option>Clôture / portail</option><option>Enduit / façade</option><option>Carport / abri</option></optgroup>
 <optgroup label="Formules"><option>Aménagement extérieur complet</option><option>Contrat d'entretien annuel</option></optgroup>
 </select></label>
-<label class="full">Votre projet<textarea placeholder="Surface, type de travaux, accès, délais souhaités…"></textarea></label>
-<button type="submit" class="full">Envoyer ma demande</button>
+<label class="full">Votre projet<textarea name="Projet" placeholder="Surface, type de travaux, accès, délais souhaités…"></textarea></label>
+<button type="submit" class="full" id="devis-btn">Envoyer ma demande</button>
+<p id="devis-msg" class="full" role="status" aria-live="polite" style="margin:0;font-size:15px;font-weight:600;min-height:1em"></p>
 </form>
 </div>
 </div>
@@ -447,6 +450,30 @@ document.querySelectorAll('.slider').forEach(function(s){
   s.addEventListener('touchmove',function(e){move(e);},{passive:true});
   s.addEventListener('touchstart',function(e){move(e);},{passive:true});
 });
+</script>
+<script>
+(function(){
+  var f=document.getElementById('devis-form'), btn=document.getElementById('devis-btn'), msg=document.getElementById('devis-msg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){f.reportValidity();return;}
+    var data=Object.fromEntries(new FormData(f).entries());
+    if(data._honey){return;}
+    data._subject='Nouvelle demande de devis — '+(data.Prestation||'site BJ Multiservices');
+    data._template='table';
+    data._captcha='false';
+    if(!data.email) delete data.email;
+    btn.disabled=true; btn.textContent='Envoi en cours…'; msg.textContent=''; msg.style.color='';
+    fetch('https://formsubmit.co/ajax/bj.multiservices66@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success==='true'||j.success===true){f.reset();msg.style.color='#1E4631';msg.textContent='Merci ! Votre demande a bien été envoyée. Nous vous rappelons rapidement.';}
+        else{throw new Error(j.message||'erreur');}
+      })
+      .catch(function(){msg.style.color='#B8561E';msg.textContent='Envoi impossible pour le moment. Appelez-nous au 06 04 43 14 18.';})
+      .finally(function(){btn.disabled=false;btn.textContent='Envoyer ma demande';});
+  });
+})();
 </script>
 </body>
 </html>
