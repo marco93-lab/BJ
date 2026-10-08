@@ -118,4 +118,457 @@ nav a:hover{color:var(--orange)}
 .faq h2{font-size:50px;margin-top:16px}
 details{border-top:1px solid #CFC7B5;padding:24px 0}
 details:last-child{border-bottom:1px solid #CFC7B5}
-summary{font-size:19px;font-w
+summary{font-size:19px;font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary:after{content:"+";font-size:26px;line-height:1;color:var(--orange)}
+details[open] summary:after{content:"–"}
+details p{font-size:16px;line-height:1.6;color:var(--text2);margin-top:12px}
+
+/* devis */
+.devis{padding:0 0 110px}
+.devis .box{border-radius:28px;overflow:hidden;display:grid;grid-template-columns:480px 1fr}
+.devis .l{padding:60px;background:var(--orange);color:#fff;display:flex;flex-direction:column;gap:22px}
+.devis .l h2{font-size:54px}
+.devis .l p{font-size:18px;line-height:1.6;color:#FCE9DC}
+.devis .l .c{margin-top:auto;display:flex;flex-direction:column;gap:16px;font-size:17px;font-weight:600}
+.devis .l .c a,.devis .l .c span{display:flex;gap:12px;align-items:center}
+form{padding:60px;background:#fff;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:700}
+input,select,textarea{height:52px;padding:0 16px;border:1.5px solid #CFC7B5;border-radius:12px;font-size:16px;font-family:inherit;background:#F9F7F2;color:var(--ink)}
+textarea{height:150px;padding:14px 16px;resize:vertical}
+.full{grid-column:1/-1}
+form button{height:60px;border:none;border-radius:999px;background:var(--ink);color:#fff;font-size:17px;font-weight:700;font-family:inherit;cursor:pointer}
+
+footer{background:var(--ink);color:#B7C2BA;font-size:14px}
+footer .wrap{padding-top:56px;padding-bottom:56px;display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap}
+footer .n{font-family:'Bricolage Grotesque',sans-serif;font-size:26px;font-weight:800;color:var(--paper)}
+footer .col{display:flex;flex-direction:column;gap:10px}
+footer .links{display:flex;gap:28px;flex-wrap:wrap}
+
+@media (max-width:1100px){
+ .wrap{padding:0 40px}
+ nav{display:none}
+ .hero .wrap,.zone .box,.faq .wrap,.devis .box{grid-template-columns:1fr}
+ .hero-img{height:520px}
+ .grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .svc-head{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:680px){
+ .wrap{padding:0 18px}
+ header .wrap{height:70px}
+ .hcta .btn-l{display:none}
+ .hcta .btn{padding:10px 16px;font-size:14px}
+ .brand small{display:none}
+ .hero .wrap{padding-top:36px;padding-bottom:56px;gap:36px}
+ .hero h1{font-size:46px;letter-spacing:-1.5px}
+ .hero p.lead{font-size:17px}
+ .hero-img{height:380px}
+ .hero-img .a{inset:0 0 70px 30px}
+ .hero-img .b{height:170px;border-width:6px}
+ .hero-img .tag{display:none}
+ h2,.zone h2,.faq h2,.devis .l h2{font-size:38px;letter-spacing:-1px}
+ .svc,.steps{padding:70px 0}
+ .form-s{padding:70px 0}
+ .grid3,.grid4,form{grid-template-columns:1fr}
+ .card .ph{height:190px}
+ .zone .box,.devis .l,form{padding:32px 22px}
+ .band .wrap{font-size:16px;gap:12px}
+ .plan{padding:30px 24px}
+}
+
+.real{padding:110px 0;background:var(--paper)}
+.ba-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:52px}
+.ba{background:#fff;border-radius:22px;overflow:hidden}
+.ba .cap{padding:22px 26px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.ba .cap b{font-family:'Bricolage Grotesque',sans-serif;font-size:22px}
+.ba .cap small{font-size:14px;color:var(--text2);font-weight:600}
+@media (max-width:900px){.ba-grid{grid-template-columns:1fr}}
+@media (max-width:680px){.real{padding:70px 0}.slider{height:320px}.ba .cap{flex-direction:column;align-items:flex-start;gap:4px}}
+.slider{position:relative;height:440px;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:pan-y;background:#DDD6C6}
+.slider .img{position:absolute;inset:0;background:center/cover no-repeat}
+.slider .before{clip-path:inset(0 calc(100% - var(--p)) 0 0)}
+.slider .lbl{position:absolute;top:14px;z-index:2;font-size:12px;font-weight:800;letter-spacing:1.2px;padding:6px 12px;border-radius:999px;color:#fff;pointer-events:none}
+.slider .lbl.l{left:14px;background:rgba(22,35,27,.85)}
+.slider .lbl.r{right:14px;background:var(--orange)}
+.slider .handle{position:absolute;top:0;bottom:0;left:var(--p);width:3px;margin-left:-1.5px;background:#fff;z-index:2;pointer-events:none;box-shadow:0 0 8px rgba(0,0,0,.35)}
+.slider .handle i{position:absolute;top:50%;left:50%;width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:#fff;color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.3)}
+.slider input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize;z-index:3;touch-action:pan-y}
+.ba-hint{font-size:14px;font-weight:600;color:var(--text2);margin-top:14px;display:flex;gap:8px;align-items:center}
+
+.chantiers{padding:110px 0;background:var(--stone)}
+.ch-card{margin-top:52px;background:#fff;border-radius:24px;overflow:hidden;display:grid;grid-template-columns:360px 1fr}
+.ch-info{padding:40px 36px;display:flex;flex-direction:column;gap:16px}
+.ch-city{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;padding:8px 14px;border-radius:999px;background:var(--ink);color:#fff;font-weight:800;font-size:14px;letter-spacing:.5px}
+.ch-info h3{font-family:'Bricolage Grotesque',sans-serif;font-size:30px;line-height:1.1;font-weight:800;letter-spacing:-.5px}
+.ch-info p{font-size:16px;line-height:1.6;color:var(--text2)}
+.ch-tags{display:flex;flex-wrap:wrap;gap:8px}
+.ch-tags span{font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;background:var(--mint);color:var(--green)}
+.ch-meta{margin-top:auto;font-size:14px;font-weight:600;color:var(--text2)}
+.ch-gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:150px;gap:4px;padding:4px}
+.ch-gal button{border:0;padding:0;cursor:zoom-in;background:#DDD6C6 center/cover no-repeat;border-radius:10px;position:relative;overflow:hidden}
+.ch-gal button:hover{filter:brightness(1.06)}
+.ch-gal button.big{grid-column:span 2;grid-row:span 2}
+.ch-gal button.wide{grid-column:span 2}
+.ch-gal button span{position:absolute;left:10px;top:10px;font-size:11px;font-weight:800;letter-spacing:1px;padding:5px 10px;border-radius:999px;background:rgba(22,35,27,.85);color:#fff}
+.ch-gal button span.o{background:var(--orange)}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,16,12,.94);display:none;align-items:center;justify-content:center}
+.lb.on{display:flex}
+.lb img{max-width:92vw;max-height:84vh;border-radius:12px;object-fit:contain}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:52px;height:52px;border-radius:50%;font-size:26px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb button:hover{background:rgba(255,255,255,.22)}
+.lb .x{top:18px;right:18px}.lb .pv{left:18px;top:50%;margin-top:-26px}.lb .nx{right:18px;top:50%;margin-top:-26px}
+.lb .ct{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#fff;font-weight:600;font-size:14px}
+@media (max-width:1000px){.ch-card{grid-template-columns:1fr}}
+@media (max-width:680px){.chantiers{padding:70px 0}.ch-info{padding:28px 22px}.ch-gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:130px}.ch-gal button.wide{grid-column:span 2}.lb .pv,.lb .nx{top:auto;bottom:56px;margin:0}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+<a href="#top" class="brand" aria-label="BJ Multiservices — accueil">
+<img src="images/logo.png" alt="" width="46" height="46" style="border-radius:50%">
+<span><b>BJ Multiservices</b><small>Paysagisme · Maçonnerie</small></span>
+</a>
+<nav>
+<a href="#paysagisme">Paysagisme</a>
+<a href="#maconnerie">Maçonnerie</a>
+<a href="#realisations">Réalisations</a>
+<a href="#chantiers">Chantiers</a>
+<a href="#formules">Formules</a>
+<a href="#faq">FAQ</a>
+</nav>
+<div class="hcta">
+<a href="tel:+33604431418" class="btn btn-l">06 04 43 14 18</a>
+<a href="#devis" class="btn btn-o">Devis gratuit</a>
+</div>
+</div>
+</header>
+
+<section class="hero" id="top">
+<div class="wrap">
+<div>
+<div class="poles"><span class="pill g">Paysagisme</span><span class="pill s">Maçonnerie</span><span class="pill g">Pyrénées-Orientales</span></div>
+<h1>Du jardin à la pierre. Un seul artisan.</h1>
+<p class="lead">Élagage, haies, entretien d'espaces verts, murets, terrasses, clôtures. Tous vos travaux extérieurs dans le 66, avec un interlocuteur unique. Intervention sur devis uniquement.</p>
+<div class="ctas">
+<a href="#devis" class="btn btn-o">Demander mon devis gratuit</a>
+<a href="tel:+33604431418" class="btn btn-l">06 04 43 14 18</a>
+</div>
+<div class="checks">
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Devis gratuit sous 48 h</span>
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Chantier nettoyé</span>
+<span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E4631" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Assuré RC Pro &amp; décennale</span>
+</div>
+</div>
+<div class="hero-img" role="img" aria-label="Chantiers de paysagisme et de maçonnerie">
+<div class="a"></div>
+<div class="b"></div>
+<div class="tag"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B8561E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Travail soigné, garanti</div>
+</div>
+</div>
+</section>
+
+<div class="band"><div class="wrap">
+<span>Élagage</span><i>✦</i><span>Taille de haies</span><i>✦</i><span>Espaces verts</span><i>✦</i><span>Murets</span><i>✦</i><span>Terrasses</span><i>✦</i><span>Clôtures</span>
+</div></div>
+
+<!-- PAYSAGISME -->
+<section class="svc" id="paysagisme">
+<div class="wrap">
+<div class="svc-head">
+<div>
+<span class="eyebrow">01 — Paysagisme</span>
+<h2 style="margin-top:16px">Du pied de l'arbre<br>jusqu'à la cime.</h2>
+</div>
+<p>Élagage, taille, débroussaillage et entretien régulier. Chaque chantier commence par une visite gratuite et se termine terrain propre.</p>
+</div>
+<div class="grid3">
+<article class="card"><div class="ph" style="background-image:url(images/elagage.jpg)"></div><div class="bd"><h3>Élagage</h3><p>Taille douce, éclaircie, réduction de couronne, bois mort. En grimpe ou nacelle, dans le respect de l'arbre.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/abattage.jpg)"></div><div class="bd"><h3>Abattage &amp; démontage</h3><p>Abattage direct ou démontage par rétention près des maisons et clôtures. Arbres morts, dangereux ou gênants.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/haies.jpg)"></div><div class="bd"><h3>Taille de haies</h3><p>Cyprès, lauriers, thuyas, photinias. Taille d'entretien, de formation ou remise en forme de haies négligées.</p></div></article>
+<article class="card dark"><div class="bd"><h3>Débroussaillage OLD <span class="badge">OBLIGATOIRE</span></h3><p>Mise en conformité avec l'obligation légale de débroussaillement autour des habitations. Broussailles éliminées, houppiers mis à distance.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/souches.jpg)"></div><div class="bd"><h3>Rognage de souches</h3><p>Dessouchage à la rogneuse sous le niveau du sol. Terrain remis à plat, prêt à replanter ou aménager.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/espaces-verts.jpg)"></div><div class="bd"><h3>Entretien espaces verts</h3><p>Tonte, désherbage, taille d'arbustes et fruitiers, feuilles. Ponctuel ou en contrat à l'année.</p></div></article>
+</div>
+<div class="note">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#B8561E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h13l5 5v5h-3"/><path d="M3 7v10h2"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="16.5" cy="17.5" r="2.5"/></svg>
+<span><strong>Inclus sur chaque chantier :</strong> évacuation des gravats et déchets verts, nettoyage complet en fin d'intervention.</span>
+</div>
+</div>
+</section>
+
+<!-- MACONNERIE -->
+<section class="svc stone" id="maconnerie">
+<div class="wrap">
+<div class="svc-head">
+<div>
+<span class="eyebrow">02 — Maçonnerie</span>
+<h2 style="margin-top:16px">Construire, rénover,<br>solide et durable.</h2>
+</div>
+<p>Petits et moyens travaux de maçonnerie extérieure et intérieure. Chiffrage précis après visite, matériaux adaptés au climat du Roussillon.</p>
+</div>
+<div class="grid3">
+<article class="card"><div class="ph" style="background-image:url(images/murets.jpg)"></div><div class="bd"><h3>Murs &amp; murets</h3><p>Murs de soutènement, murets de clôture, murs en parpaing, pierre ou moellons. Fondations comprises.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/terrasses.jpg)"></div><div class="bd"><h3>Terrasses &amp; dalles</h3><p>Dalle béton, chape, terrasse carrelée ou en pierre naturelle. Pente d'écoulement et finitions soignées.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/allees.jpg)"></div><div class="bd"><h3>Allées &amp; pavage</h3><p>Allées de jardin, accès garage, bordures, pavés autobloquants, dallage, béton désactivé.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/clotures.jpg)"></div><div class="bd"><h3>Clôtures &amp; portails</h3><p>Soubassements, piliers de portail, pose de clôtures rigides, grillage, panneaux occultants.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/enduits.jpg)"></div><div class="bd"><h3>Enduits &amp; façades</h3><p>Crépi, enduit à la chaux, rejointoiement de pierres, reprise de fissures, rafraîchissement de façade.</p></div></article>
+<article class="card"><div class="ph" style="background-image:url(images/carports.jpg)"></div><div class="bd"><h3>Carports &amp; abris</h3><p>Carports et abris en bois sur dalle ou plots béton, aménagement des abords en dallage ou gravier.</p></div></article>
+</div>
+</div>
+</section>
+
+<!-- REALISATIONS -->
+<section class="real" id="realisations">
+<div class="wrap">
+<div class="svc-head" style="margin-bottom:0">
+<div>
+<span class="eyebrow">03 — Réalisations</span>
+<h2 style="margin-top:16px">Avant, après.<br>Nos chantiers parlent.</h2>
+</div>
+<p>Quelques chantiers réalisés dans le 66. Photos prises sur place. Glissez le curseur pour voir la transformation.</p>
+</div>
+<div class="ba-grid">
+<article class="ba"><div class="slider" style="--p:50%"><div class="img after" style="background-image:url(images/jardin-apres.jpg)"></div><div class="img before" style="background-image:url(images/jardin-avant.jpg);background-position:center 60%"></div><span class="lbl l">AVANT</span><span class="lbl r">APRÈS</span><div class="handle" aria-hidden="true"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></i></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div><div class="cap"><b>Création de jardin</b><small>Gazon en plaques, massif, olivier</small></div></article>
+<article class="ba"><div class="slider" style="--p:50%"><div class="img after" style="background-image:url(images/allee-apres.jpg)"></div><div class="img before" style="background-image:url(images/allee-avant.jpg);background-position:center 60%"></div><span class="lbl l">AVANT</span><span class="lbl r">APRÈS</span><div class="handle" aria-hidden="true"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></i></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div><div class="cap"><b>Allée en pas japonais</b><small>Gazon + dalles pierre</small></div></article>
+<article class="ba"><div class="slider" style="--p:50%"><div class="img after" style="background-image:url(images/olivier-apres.jpg)"></div><div class="img before" style="background-image:url(images/olivier-avant.jpg);background-position:center 55%"></div><span class="lbl l">AVANT</span><span class="lbl r">APRÈS</span><div class="handle" aria-hidden="true"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></i></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div><div class="cap"><b>Jardin autour de l&#39;olivier</b><small>Terrassement, gazon, bordures</small></div></article>
+<article class="ba"><div class="slider" style="--p:50%"><div class="img after" style="background-image:url(images/murets-apres.jpg)"></div><div class="img before" style="background-image:url(images/murets-avant.jpg);background-position:center"></div><span class="lbl l">AVANT</span><span class="lbl r">APRÈS</span><div class="handle" aria-hidden="true"><i><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 6-6 6 6 6M15 6l6 6-6 6"/></svg></i></div><input type="range" min="0" max="100" value="50" aria-label="Comparer avant et après"></div><div class="cap"><b>Murets de cour</b><small>Parpaing monté, puis enduit</small></div></article>
+</div>
+</div>
+</section>
+
+<!-- CHANTIERS -->
+<section class="chantiers" id="chantiers">
+<div class="wrap">
+<div class="svc-head" style="margin-bottom:0">
+<div>
+<span class="eyebrow">04 — Nos chantiers</span>
+<h2 style="margin-top:16px">Sur le terrain,<br>près de chez vous.</h2>
+</div>
+<p>Nos derniers chantiers dans le 66, ville par ville. Cliquez sur une photo pour l&#39;agrandir.</p>
+</div>
+
+<article class="ch-card" data-chantier>
+<div class="ch-info">
+<span class="ch-city"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>PIA</span>
+<h3>Taille de haies de lauriers-roses</h3>
+<p>Haies de lauriers-roses remises au carré tout autour du jardin et côté rue : hauteur rabattue, faces dressées, déchets verts évacués.</p>
+<div class="ch-tags"><span>Taille de haies</span><span>Évacuation déchets verts</span></div>
+<span class="ch-meta">Octobre 2026 · 9 photos</span>
+</div>
+<div class="ch-gal">
+<button type="button" class="big" style="background-image:url(images/pia-1.jpg)" data-src="images/pia-1.jpg" aria-label="Agrandir la photo 1"><span class="">AVANT</span></button>
+<button type="button" class="" style="background-image:url(images/pia-2.jpg)" data-src="images/pia-2.jpg" aria-label="Agrandir la photo 2"><span class="o">PENDANT</span></button>
+<button type="button" class="" style="background-image:url(images/pia-3.jpg)" data-src="images/pia-3.jpg" aria-label="Agrandir la photo 3"><span class="o">PENDANT</span></button>
+<button type="button" class="wide" style="background-image:url(images/pia-4.jpg)" data-src="images/pia-4.jpg" aria-label="Agrandir la photo 4"><span class="o">APRÈS</span></button>
+<button type="button" class="wide" style="background-image:url(images/pia-5.jpg)" data-src="images/pia-5.jpg" aria-label="Agrandir la photo 5"><span class="o">APRÈS</span></button>
+<button type="button" class="wide" style="background-image:url(images/pia-6.jpg)" data-src="images/pia-6.jpg" aria-label="Agrandir la photo 6"><span class="o">APRÈS</span></button>
+<button type="button" class="" style="background-image:url(images/pia-7.jpg)" data-src="images/pia-7.jpg" aria-label="Agrandir la photo 7"><span class="o">APRÈS</span></button>
+<button type="button" class="" style="background-image:url(images/pia-8.jpg)" data-src="images/pia-8.jpg" aria-label="Agrandir la photo 8"><span class="">CÔTÉ RUE</span></button>
+<button type="button" class="wide" style="background-image:url(images/pia-9.jpg)" data-src="images/pia-9.jpg" aria-label="Agrandir la photo 9"><span class="">CÔTÉ RUE</span></button>
+</div>
+</article>
+
+</div>
+</section>
+
+<!-- FORMULES -->
+<section class="form-s" id="formules">
+<div class="wrap">
+<div class="intro">
+<span class="eyebrow">05 — Formules</span>
+<h2>Une formule pour chaque projet.</h2>
+<p>Aucun tarif affiché : chaque terrain est différent. Chaque formule fait l'objet d'un devis gratuit et détaillé après visite.</p>
+</div>
+<div class="grid3">
+<div class="plan">
+<span class="k">Ponctuel</span>
+<h3>Intervention unique</h3>
+<p>Un arbre à élaguer, une haie à reprendre, un muret à monter. On vient, on fait, on nettoie.</p>
+<ul><li>Visite et devis gratuits</li><li>Paysagisme ou maçonnerie</li><li>Évacuation des déchets</li></ul>
+<a href="#devis" class="btn">Sur devis</a>
+</div>
+<div class="plan hl">
+<div class="top"><span class="k">Projet complet</span><span class="hot">Le plus demandé</span></div>
+<h3>Aménagement extérieur</h3>
+<p>Terrasse, murets, allées et jardin pensés ensemble. Un seul artisan, un seul devis, un seul planning.</p>
+<ul><li>Paysagisme + maçonnerie coordonnés</li><li>Plan d'aménagement sur mesure</li><li>Interlocuteur unique du début à la fin</li><li>Finitions et plantations incluses</li></ul>
+<a href="#devis" class="btn">Sur devis</a>
+</div>
+<div class="plan">
+<span class="k">À l'année</span>
+<h3>Contrat d'entretien</h3>
+<p>Votre extérieur tenu toute l'année sans y penser. Passages planifiés selon les saisons.</p>
+<ul><li>Tonte et désherbage réguliers</li><li>Taille des haies 2 fois par an</li><li>Petites reprises de maçonnerie</li></ul>
+<a href="#devis" class="btn">Sur devis</a>
+</div>
+</div>
+<p class="foot">Copropriétés, syndics, mairies et professionnels : formules sur mesure, contactez-nous.</p>
+</div>
+</section>
+
+<!-- METHODE -->
+<section class="steps" id="methode">
+<div class="wrap">
+<span class="eyebrow">06 — Comment ça marche</span>
+<h2 style="margin-top:16px">Quatre étapes, zéro surprise.</h2>
+<div class="grid4">
+<div class="step"><span class="n">01</span><h3>Vous nous contactez</h3><p>Par téléphone ou via le formulaire, avec quelques photos si possible.</p></div>
+<div class="step"><span class="n">02</span><h3>Visite sur place</h3><p>Métrés, accès, état du terrain et des arbres. Gratuit, sans engagement.</p></div>
+<div class="step"><span class="n">03</span><h3>Devis détaillé</h3><p>Un prix ferme, poste par poste. Vous validez, on fixe une date.</p></div>
+<div class="step"><span class="n">04</span><h3>Chantier propre</h3><p>Travaux réalisés, déchets évacués, terrain nettoyé.</p></div>
+</div>
+</div>
+</section>
+
+<!-- ZONE -->
+<section class="zone" id="zone">
+<div class="wrap">
+<div class="box">
+<div>
+<span class="eyebrow" style="color:#1E4631">07 — Zone d'intervention</span>
+<h2 style="margin-top:16px">Tout le département des Pyrénées-Orientales.</h2>
+<p>De la plaine du Roussillon à la côte, jusqu'aux Aspres et au Conflent.</p>
+</div>
+<div class="towns">
+<span>Perpignan</span><span>Canet-en-Roussillon</span><span>Argelès-sur-Mer</span><span>Saint-Cyprien</span><span>Rivesaltes</span><span>Thuir</span><span>Céret</span><span>Elne</span><span>Le Boulou</span><span>Prades</span><span>Ille-sur-Têt</span><span>Collioure</span><span class="all">+ toutes communes du 66</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+<div class="wrap">
+<div>
+<span class="eyebrow">08 — Questions</span>
+<h2>Vous vous demandez…</h2>
+</div>
+<div>
+<details open><summary>Pourquoi pas de prix sur le site ?</summary><p>Surface, accès, nature du sol, hauteur des arbres : chaque chantier est différent. Un devis après visite garantit un prix juste et ferme.</p></details>
+<details><summary>Pouvez-vous gérer jardin et maçonnerie ensemble ?</summary><p>Oui, c'est notre force. Terrasse, murets, allées et plantations sont coordonnés sur un seul planning, avec un seul interlocuteur.</p></details>
+<details><summary>Faut-il une autorisation pour un mur ou une clôture ?</summary><p>Selon votre commune et la hauteur, une déclaration préalable peut être nécessaire. Renseignez-vous en mairie, nous vous accompagnons sur les éléments techniques.</p></details>
+<details><summary>Quelle période pour élaguer ?</summary><p>Hors montée de sève, idéalement de fin d'automne à fin d'hiver. Les interventions urgentes restent possibles toute l'année.</p></details>
+<details><summary>Suis-je concerné par l'obligation de débroussaillement ?</summary><p>Si votre terrain est en zone exposée aux feux de forêt, oui. Renseignez-vous en mairie, nous réalisons ensuite la mise en conformité.</p></details>
+</div>
+</div>
+</section>
+
+<!-- DEVIS -->
+<section class="devis" id="devis">
+<div class="wrap">
+<div class="box">
+<div class="l">
+<h2>Votre devis gratuit.</h2>
+<p>Décrivez votre projet, nous vous rappelons pour fixer une visite.</p>
+<div class="c">
+<a href="tel:+33604431418"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>06 04 43 14 18</a>
+<a href="mailto:bj.multiservices66@gmail.com"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>bj.multiservices66@gmail.com</a>
+<span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Lun – Sam · 8 h – 19 h</span>
+</div>
+</div>
+<form id="devis-form" novalidate>
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<label>Nom<input type="text" name="Nom" placeholder="Votre nom" required></label>
+<label>Téléphone<input type="tel" name="Téléphone" placeholder="Votre numéro" required></label>
+<label class="full">Email (facultatif)<input type="email" name="email" placeholder="vous@exemple.fr"></label>
+<label>Commune<input type="text" name="Commune" placeholder="Ex : Perpignan"></label>
+<label>Prestation
+<select name="Prestation">
+<optgroup label="Paysagisme"><option>Élagage</option><option>Abattage</option><option>Taille de haies</option><option>Débroussaillage OLD</option><option>Rognage de souches</option><option>Entretien espaces verts</option></optgroup>
+<optgroup label="Maçonnerie"><option>Murs &amp; murets</option><option>Terrasse / dalle</option><option>Allée / pavage</option><option>Clôture / portail</option><option>Enduit / façade</option><option>Carport / abri</option></optgroup>
+<optgroup label="Formules"><option>Aménagement extérieur complet</option><option>Contrat d'entretien annuel</option></optgroup>
+</select></label>
+<label class="full">Votre projet<textarea name="Projet" placeholder="Surface, type de travaux, accès, délais souhaités…"></textarea></label>
+<button type="submit" class="full" id="devis-btn">Envoyer ma demande</button>
+<p id="devis-msg" class="full" role="status" aria-live="polite" style="margin:0;font-size:15px;font-weight:600;min-height:1em"></p>
+</form>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+<div class="col">
+<span class="n">BJ Multiservices</span>
+<span>Paysagisme &amp; maçonnerie · Pyrénées-Orientales (66)</span>
+<span>SIRET 521 256 222 00022</span>
+</div>
+<div class="links">
+<a href="#paysagisme">Paysagisme</a><a href="#maconnerie">Maçonnerie</a><a href="#formules">Formules</a><a href="#devis">Devis</a><a href="#top">Mentions légales</a>
+</div>
+</div>
+</footer>
+
+<script>
+document.querySelectorAll('.slider').forEach(function(s){
+  var r=s.querySelector('input');
+  function set(v){s.style.setProperty('--p',v+'%');}
+  r.addEventListener('input',function(){set(r.value);});
+  // glissement tactile direct
+  function move(e){var b=s.getBoundingClientRect();var x=(e.touches?e.touches[0].clientX:e.clientX)-b.left;var v=Math.max(0,Math.min(100,x/b.width*100));r.value=v;set(v);}
+  s.addEventListener('touchmove',function(e){move(e);},{passive:true});
+  s.addEventListener('touchstart',function(e){move(e);},{passive:true});
+});
+</script>
+<script>
+(function(){
+  var f=document.getElementById('devis-form'), btn=document.getElementById('devis-btn'), msg=document.getElementById('devis-msg');
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){f.reportValidity();return;}
+    var data=Object.fromEntries(new FormData(f).entries());
+    if(data._honey){return;}
+    data._subject='Nouvelle demande de devis — '+(data.Prestation||'site BJ Multiservices');
+    data._template='table';
+    data._captcha='false';
+    if(!data.email) delete data.email;
+    btn.disabled=true; btn.textContent='Envoi en cours…'; msg.textContent=''; msg.style.color='';
+    fetch('https://formsubmit.co/ajax/bj.multiservices66@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json();})
+      .then(function(j){
+        if(j.success==='true'||j.success===true){f.reset();msg.style.color='#1E4631';msg.textContent='Merci ! Votre demande a bien été envoyée. Nous vous rappelons rapidement.';}
+        else{throw new Error(j.message||'erreur');}
+      })
+      .catch(function(err){
+        console.warn('FormSubmit:',err&&err.message);
+        var lines=['Nom : '+(data.Nom||''),'Téléphone : '+(data['Téléphone']||''),'Email : '+(data.email||''),'Commune : '+(data.Commune||''),'Prestation : '+(data.Prestation||''),'','Projet :',(data.Projet||'')];
+        var url='mailto:bj.multiservices66@gmail.com?subject='+encodeURIComponent(data._subject)+'&body='+encodeURIComponent(lines.join('\n'));
+        msg.style.color='#1E4631';
+        msg.innerHTML='Votre application mail s\u2019ouvre avec la demande pr\u00eate : appuyez sur <b>Envoyer</b>. Rien ne s\u2019ouvre ? <a href="'+url+'" style="color:#B8561E;text-decoration:underline">Cliquez ici</a> ou appelez le 06 04 43 14 18.';
+        window.location.href=url;
+      })
+      .finally(function(){btn.disabled=false;btn.textContent='Envoyer ma demande';});
+  });
+})();
+</script>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo du chantier">
+<img src="" alt="Photo du chantier">
+<button type="button" class="x" aria-label="Fermer">&times;</button>
+<button type="button" class="pv" aria-label="Photo précédente">&#8249;</button>
+<button type="button" class="nx" aria-label="Photo suivante">&#8250;</button>
+<div class="ct"></div>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'),img=lb.querySelector('img'),ct=lb.querySelector('.ct'),list=[],i=0,sx=null;
+  function show(){img.src=list[i];ct.textContent=(i+1)+' / '+list.length;}
+  document.querySelectorAll('[data-chantier]').forEach(function(card){
+    var b=[].slice.call(card.querySelectorAll('.ch-gal button'));
+    b.forEach(function(el,k){el.addEventListener('click',function(){list=b.map(function(x){return x.dataset.src;});i=k;show();lb.classList.add('on');document.body.style.overflow='hidden';});});
+  });
+  function close(){lb.classList.remove('on');document.body.style.overflow='';}
+  function go(d){i=(i+d+list.length)%list.length;show();}
+  lb.querySelector('.x').onclick=close;
+  lb.querySelector('.pv').onclick=function(){go(-1);};
+  lb.querySelector('.nx').onclick=function(){go(1);};
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1);});
+  lb.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;},{passive:true});
+  lb.addEventListener('touchend',function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)go(dx<0?1:-1);sx=null;});
+})();
+</script>
+</body>
+</html>
